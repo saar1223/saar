@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.steven</groupId>
+    <artifactId>saar</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>saar</name>
+    <url>https://github.com/saar1223/saar</url>
+    <organization>
+        <name>es</name>
+        <url>https://github.com/saar1223</url>
+    </organization>
+
+    <modules>
+        <module>parent</module>
+        <module>codegen</module>
+    </modules>
+
+	<build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <locales>zh_CN</locales>
+                    <outputEncoding>UTF-8</outputEncoding>
+                    <inputEncoding>UTF-8</inputEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+	<repositories>
+		<repository>
+            <id>aliyun</id>
+            <name>aliyun Repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+	</repositories>
+
+	<pluginRepositories>
+
+        <pluginRepository>
+            <id>aliyun Releases</id>
+            <name>aliyun Releases</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+	<developers>
+        <developer>
+            <name>ganxintong</name>
+            <email>ganxintong@163.com</email>
+            <url>https://github.com/saar1223</url>
+            <roles>
+                <role>software engineer</role>
+            </roles>
+            <timezone>8</timezone>
+        </developer>
+    </developers>
+
+	 <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+	<issueManagement>
+        <system>Github</system>
+        <url>https://github.com/saar1223/saar/issues</url>
+    </issueManagement>
+
+	<distributionManagement>
+        <!-- mvn site:deploy 部署的位置-->
+        <site>
+            <id>local</id>
+            <name>filesystem</name>
+            <!-- 修改到磁盘的相应位置 -->
+            <url>file:D:\target\site</url>
+        </site>
+    </distributionManagement>
+
+	<scm>
+        <url>https://github.com/saar1223/saar/</url>
+        <connection>scm:git:git://github.com/saar1223/saar.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:saar1223/saar.git</developerConnection>
+    </scm>
+	
+</project>
